@@ -16,3 +16,4 @@ const fs =  require('fs');
 // fs.cpSync("a1.txt","b1.txt");
 // fs.cp("a1.txt","b1.txt",()=>{});
 
+// fs.unlinkSync("./ad.txt");
