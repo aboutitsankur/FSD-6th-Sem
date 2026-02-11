@@ -1,0 +1,20 @@
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <nav className="App">
+        <img src={viteLogo} alt="Vite Logo" />
+        <a href="">Home</a>
+        <a href="">Work</a>
+      </nav>
+    </>
+  )
+}
+
+export default App
