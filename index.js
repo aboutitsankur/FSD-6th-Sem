@@ -24,7 +24,7 @@
 // });
 
 
-const os=require('os');
+// const os=require('os');
 // console.log("platform",os.platform());
 // console.log("userinfo",os.userInfo());
 // console.log("cpu architecture",os.arch());
@@ -32,5 +32,20 @@ const os=require('os');
 // console.log("total memory",os.totalmem());
 // console.log("uptime",os.uptime());
 // console.log("home dir",os.homedir());
-console.log("host name",os.hostname());
+// console.log("host name",os.hostname());
 
+
+const http=require('http');
+const fs=require('fs');
+const home= fs.readFileSync("index.html","utf-8");
+const server=http.createServer((req,res)=>{
+    res.statusCode=200;
+    res.setHeader('Content-Type','text/html');
+    res.end(home);
+    // console.log('server1');
+    // res.end('Hi this is my first server');
+});
+
+server.listen(8000,()=>{
+    console.log('server is running');
+})
